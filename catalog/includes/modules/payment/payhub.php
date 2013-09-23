@@ -139,7 +139,7 @@
                       'CVV_CODE' => ($cvv != NULL) ? "Y" : "N"
                       );
 
-      switch (MODULE_PAYMENT_PAYHUB_TRANSACTION_SERVER) {
+      switch (MODULE_PAYMENT_PAYHUB_TESTMODE) {
         case 'Live':
           $gateway_url = 'https://vtp1.payhub.com/payhubvtws/transaction.json';
           break;
