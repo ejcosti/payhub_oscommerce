@@ -110,10 +110,10 @@
       $params = array('RECORD_FORMAT' => "CC",
                       'CARDHOLDER_ID_CODE' => "@",
                       'CARDHOLDER_ID_DATA' => "",
-                      'MERCHANT_NUMBER' => substr(MODULE_PAYMENT_PAYHUB_ORGID, 0, 8),
-                      'USER_NAME' => substr(MODULE_PAYMENT_PAYHUB_API_USERNAME, 0, 8),
-                      'PASSWORD' => substr(MODULE_PAYMENT_PAYHUB_API_PASSWORD, 0, 8),
-                      'TERMINAL_NUMBER' => substr(MODULE_PAYMENT_PAYHUB_TERMID, 0, 8),
+                      'MERCHANT_NUMBER' => substr(MODULE_PAYMENT_PAYHUB_ORGID, 0, 15),
+                      'USER_NAME' => substr(MODULE_PAYMENT_PAYHUB_API_USERNAME, 0, 15),
+                      'PASSWORD' => substr(MODULE_PAYMENT_PAYHUB_API_PASSWORD, 0, 15),
+                      'TERMINAL_NUMBER' => substr(MODULE_PAYMENT_PAYHUB_TERMID, 0, 15),
                       'TRANSACTION_CODE' => '01',
                       'ACCOUNT_DATA_SOURCE' => 'T',
                       'CUSTOMER_FIRST_NAME' => substr($order->billing['firstname'], 0, 50),
@@ -313,6 +313,10 @@
     curl_close($ch);
 
     $raw = preg_replace('/\//', '', $raw);
+
+    var_dump($raw);
+    var_dump($parameters);
+    $var_dump($parameters);
 
     return $raw;
     }
