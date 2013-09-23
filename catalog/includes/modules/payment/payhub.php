@@ -314,10 +314,6 @@
 
     $raw = preg_replace('/\//', '', $raw);
 
-    var_dump($raw);
-    var_dump($parameters);
-    $var_dump($parameters);
-
     return $raw;
     }
 
