@@ -216,31 +216,31 @@
 
       switch ($HTTP_GET_VARS['error']) {
         case 'invalid_expiration_date':
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_INVALID_EXP_DATE;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_INVALID_EXP_DATE . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
 
         case 'expired':
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_EXPIRED;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_EXPIRED . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
 
         case 'declined':
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_DECLINED;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_DECLINED . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
 
         case 'funds':
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_FUNDS;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_FUNDS . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
 
         case 'card_number':
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_CARD;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_CARD . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
 
         case 'cvc':
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_CVC;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_CVC . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
 
         default:
-          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_GENERAL;
+          $error_message = MODULE_PAYMENT_PAYHUB_ERROR_GENERAL . '  (' . $HTTP_GET_VARS['error'] . ')';
           break;
       }
 
